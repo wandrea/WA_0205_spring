@@ -1,7 +1,15 @@
 package hu.helixlab.spring.Domain;
 
-public class Book {
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
+public class Book {
+@Id
+@GeneratedValue(strategy= GenerationType.SEQUENCE)
     private Integer id;
     private String name;
     private String isbn;
